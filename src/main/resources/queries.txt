@@ -1,0 +1,9 @@
+//CONSULTAS PARA LISTAR TODOS LOS PRODUCTOS
+
+select p.* , c.nombre as categoria from productos  as p join categorias as c on p.tipo_cat = c.id_catg;
+
+select  * FROM PRODUCTOS;
+
+create table productos(id_prod int primary key auto_increment,TIPO_CAT INT, nombre varchar(75),
+precio int,fecha_ingreso date, sku varchar (10)  unique, CONSTRAINT FK_CATEG FOREIGN KEY (TIPO_CAT) REFERENCES CATEGORIAS (ID_CATG));
+
